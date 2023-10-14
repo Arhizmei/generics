@@ -12,6 +12,11 @@ class MainActivity : AppCompatActivity() {
         var textView: TextView
         textView = findViewById(R.id.textView)
         val moneyCase = Case<Long>(1000000)
-        textView.text = "${moneyCase.get()}"
+
+        moneyCase.add(1003)
+
+        var jeweleryCase = Case<String>("Brilliant")
+        jeweleryCase.add("XXX")
+        textView.text = "${jeweleryCase.get()}"
     }
 }
